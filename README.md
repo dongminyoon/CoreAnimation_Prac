@@ -13,3 +13,7 @@
 
 ### 실행화면
 
+1. ***Custom Label Counting***
+
+<img src="./images/customcountinglabel.gif" width="200px">
+
