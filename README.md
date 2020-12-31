@@ -16,9 +16,9 @@
 
 1. ***Custom Label Counting***
 
-<img src="./images/customcountinglabel.gif" width="200px">
+<p align="center"><img src="./images/customcountinglabel.gif" width="200px"></p>
 
 2. ***Circular Loading***
 
-<img src="./images/circleloading.gif" width="200px">
+<p align="center"><img src="./images/circleloading.gif" width="200px"></p>
 
