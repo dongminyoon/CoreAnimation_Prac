@@ -11,34 +11,34 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CountCustomLabel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreAnimation_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOh-Vg-3Ya" customClass="CountdownProgressBar" customModule="CountCustomLabel" customModuleProvider="target">
-                                <rect key="frame" x="141" y="387" width="132" height="132"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bn4-EY-isq" customClass="CountdownProgressBar" customModule="CoreAnimation_Practice" customModuleProvider="target">
+                                <rect key="frame" x="87" y="333" width="240" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="MOh-Vg-3Ya" secondAttribute="height" multiplier="1:1" id="bb6-SK-cbu"/>
+                                    <constraint firstAttribute="width" secondItem="Bn4-EY-isq" secondAttribute="height" multiplier="1:1" id="iTg-EG-f8O"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MOh-Vg-3Ya" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Knc-lb-pXZ"/>
-                            <constraint firstItem="MOh-Vg-3Ya" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hfb-K2-zfm"/>
-                            <constraint firstItem="MOh-Vg-3Ya" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.318841" id="qPf-q9-JfW"/>
+                            <constraint firstItem="Bn4-EY-isq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="38q-FQ-cOH"/>
+                            <constraint firstItem="Bn4-EY-isq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="iAa-hG-bzw"/>
+                            <constraint firstItem="Bn4-EY-isq" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="oMW-Vb-4oz"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="countdownProgressBar" destination="MOh-Vg-3Ya" id="xQK-n5-rp5"/>
+                        <outlet property="countdownView" destination="Bn4-EY-isq" id="Ass-or-e5c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="118.52678571428571"/>
+            <point key="canvasLocation" x="142" y="119"/>
         </scene>
     </scenes>
     <resources>

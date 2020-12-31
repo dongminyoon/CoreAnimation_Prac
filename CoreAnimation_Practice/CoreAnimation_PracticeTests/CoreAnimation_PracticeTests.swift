@@ -1,14 +1,14 @@
 //
-//  CountCustomLabelTests.swift
-//  CountCustomLabelTests
+//  CoreAnimation_PracticeTests.swift
+//  CoreAnimation_PracticeTests
 //
-//  Created by 윤동민 on 2020/12/21.
+//  Created by 윤동민 on 2021/01/01.
 //
 
 import XCTest
-@testable import CountCustomLabel
+@testable import CoreAnimation_Practice
 
-class CountCustomLabelTests: XCTestCase {
+class CoreAnimation_PracticeTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

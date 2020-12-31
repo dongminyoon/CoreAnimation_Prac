@@ -1,14 +1,13 @@
 //
 //  CountdownProgressBar.swift
-//  CountCustomLabel
+//  CoreAnimation_Practice
 //
-//  Created by 윤동민 on 2020/12/21.
+//  Created by 윤동민 on 2021/01/01.
 //
 
 import UIKit
 
 class CountdownProgressBar: UIView {
-
     private var timer = Timer()
     private var remainingTime = 0.0
     private var duration = 10.0

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  CountCustomLabel
+//  CoreAnimation_Practice
 //
-//  Created by 윤동민 on 2020/12/21.
+//  Created by 윤동민 on 2021/01/01.
 //
 
 import UIKit
