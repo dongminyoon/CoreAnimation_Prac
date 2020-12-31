@@ -9,12 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var countdownView: CountdownProgressBar!
+    @IBOutlet weak var loading: LoadingIndicator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        countdownView.startCoundDown(duration: 10)
+        loading.startAnimation()
     }
 }
 
