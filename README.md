@@ -3,9 +3,9 @@
 
 <br>
 
-| 주차  |         내용          |                   설명                   |
-| :---: | :-------------------: | :--------------------------------------: |
-| 1번째 | Custom Label Counting | 원이 돌아가면서 카운팅을 할 수 있는 기능 |
+| 주차  |                             내용                             |                   설명                   |
+| :---: | :----------------------------------------------------------: | :--------------------------------------: |
+| 1번째 | [Custom Label Counting](https://github.com/dongminyoon/CoreAnimation_Prac/blob/main/practice/CountCustomLabel/CountCustomLabel/CountdownProgressBar.swift) | 원이 돌아가면서 카운팅을 할 수 있는 기능 |
 
 <br>
 
