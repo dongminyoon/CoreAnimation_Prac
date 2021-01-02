@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D140A46259E6CCF00180B0E /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D140A45259E6CCF00180B0E /* LoadingIndicator.swift */; };
+		9D140A4B259F240000180B0E /* PieGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D140A4A259F240000180B0E /* PieGraph.swift */; };
 		9D1D5F2A259E6A9A00BFC0CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D5F29259E6A9A00BFC0CD /* AppDelegate.swift */; };
 		9D1D5F2C259E6A9A00BFC0CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D5F2B259E6A9A00BFC0CD /* SceneDelegate.swift */; };
 		9D1D5F2E259E6A9A00BFC0CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D5F2D259E6A9A00BFC0CD /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		9D140A45259E6CCF00180B0E /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		9D140A4A259F240000180B0E /* PieGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieGraph.swift; sourceTree = "<group>"; };
 		9D1D5F26259E6A9A00BFC0CD /* CoreAnimation_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1D5F29259E6A9A00BFC0CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1D5F2B259E6A9A00BFC0CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				9D1D5F5F259E6AD100BFC0CD /* CountdownProgressBar.swift */,
 				9D140A45259E6CCF00180B0E /* LoadingIndicator.swift */,
+				9D140A4A259F240000180B0E /* PieGraph.swift */,
 			);
 			path = CoreAnimationView;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				9D140A46259E6CCF00180B0E /* LoadingIndicator.swift in Sources */,
 				9D1D5F2A259E6A9A00BFC0CD /* AppDelegate.swift in Sources */,
 				9D1D5F2C259E6A9A00BFC0CD /* SceneDelegate.swift in Sources */,
+				9D140A4B259F240000180B0E /* PieGraph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
