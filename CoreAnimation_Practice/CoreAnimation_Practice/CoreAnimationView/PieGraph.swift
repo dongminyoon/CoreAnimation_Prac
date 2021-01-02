@@ -27,7 +27,6 @@ class PieGraph: UIView {
         arcLayer.lineWidth = 80
         arcLayer.fillColor = UIColor.clear.cgColor
         arcLayer.lineCap = .butt
-        arcLayer.strokeEnd = 1
 
         let center = CGPoint(x: frame.width/2, y: frame.height/2)
         let changed = CGFloat(eachSlice[curIndex]) * .pi * 2.0
@@ -55,9 +54,13 @@ class PieGraph: UIView {
 
 extension PieGraph: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        layer.sublayers?.forEach {
+            ($0 as? CAShapeLayer)?.strokeEnd = 1
+        }
+        
         guard flag else { return }
         if curIndex >= eachSlice.count-1 { return }
-
+        
         startAngle = endAngle
         curIndex += 1
         addAnimation(from: curIndex)
