@@ -54,10 +54,6 @@ class PieGraph: UIView {
 
 extension PieGraph: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        layer.sublayers?.forEach {
-            ($0 as? CAShapeLayer)?.strokeEnd = 1
-        }
-        
         guard flag else { return }
         if curIndex >= eachSlice.count-1 { return }
         
