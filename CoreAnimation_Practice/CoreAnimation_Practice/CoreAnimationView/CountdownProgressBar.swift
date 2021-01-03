@@ -134,7 +134,7 @@ class CountdownProgressBar: UIView {
         }
     }
     
-    func startCoundDown(duration: Double) {
+    func startCountDown(duration: Double) {
         self.duration = duration
         remainingTime = duration
         remainingTimeLabel.text = "\(remainingTime)"
