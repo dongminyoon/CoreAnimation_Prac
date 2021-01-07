@@ -15,25 +15,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jWl-bO-VNQ">
-                                <rect key="frame" x="20" y="394" width="335" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="jWl-bO-VNQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Ax-YP-iFg"/>
-                            <constraint firstItem="jWl-bO-VNQ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Mn4-Ab-RdS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jWl-bO-VNQ" secondAttribute="trailing" constant="20" id="pBy-cT-Fu4"/>
-                            <constraint firstItem="jWl-bO-VNQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zYY-S7-OH7"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="textField" destination="jWl-bO-VNQ" id="f8g-5I-ZAi"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
