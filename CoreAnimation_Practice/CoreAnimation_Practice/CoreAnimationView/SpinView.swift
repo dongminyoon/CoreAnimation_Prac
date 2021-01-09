@@ -70,7 +70,7 @@ class SpinnerView : UIView {
 
         let poses = type(of: self).poses
         let totalSeconds = poses.reduce(0) { $0 + $1.secondsSincePriorPose }
-
+        
         for pose in poses {
             time += pose.secondsSincePriorPose
             times.append(time / totalSeconds)
@@ -78,10 +78,7 @@ class SpinnerView : UIView {
             rotations.append(start * 2 * .pi)
             strokeEnds.append(pose.length)
         }
-
-        times.append(times.last!)
-        rotations.append(rotations[0])
-        strokeEnds.append(strokeEnds[0])
+        
 
         animateKeyPath(keyPath: "strokeEnd", duration: totalSeconds, times: times, values: strokeEnds)
         animateKeyPath(keyPath: "transform.rotation", duration: totalSeconds, times: times, values: rotations)
