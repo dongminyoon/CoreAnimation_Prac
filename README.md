@@ -31,3 +31,5 @@
 4. ***Wave***
 
 <p align="center"><img src="./images/wave.gif" width="200px"></p>
+
+5. ***Spinner Loading***
