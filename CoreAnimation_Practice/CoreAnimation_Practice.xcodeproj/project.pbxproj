@@ -19,7 +19,9 @@
 		9D1D5F4C259E6A9D00BFC0CD /* CoreAnimation_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D5F4B259E6A9D00BFC0CD /* CoreAnimation_PracticeUITests.swift */; };
 		9D1D5F60259E6AD100BFC0CD /* CountdownProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D5F5F259E6AD100BFC0CD /* CountdownProgressBar.swift */; };
 		9D5CA40425A605F4004EFD92 /* SnowlfakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CA40325A605F4004EFD92 /* SnowlfakeView.swift */; };
+		9D64380C25A97DF300B9CB73 /* SpinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D64380B25A97DF300B9CB73 /* SpinView.swift */; };
 		9D8A371125A0E76F00DA5C04 /* CurveWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A371025A0E76F00DA5C04 /* CurveWave.swift */; };
+		9DC4BD8325A8DCD20058902A /* LoadingIndicator2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4BD8225A8DCD20058902A /* LoadingIndicator2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +60,9 @@
 		9D1D5F4D259E6A9D00BFC0CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1D5F5F259E6AD100BFC0CD /* CountdownProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownProgressBar.swift; sourceTree = "<group>"; };
 		9D5CA40325A605F4004EFD92 /* SnowlfakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowlfakeView.swift; sourceTree = "<group>"; };
+		9D64380B25A97DF300B9CB73 /* SpinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinView.swift; sourceTree = "<group>"; };
 		9D8A371025A0E76F00DA5C04 /* CurveWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveWave.swift; sourceTree = "<group>"; };
+		9DC4BD8225A8DCD20058902A /* LoadingIndicator2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +144,11 @@
 			children = (
 				9D1D5F5F259E6AD100BFC0CD /* CountdownProgressBar.swift */,
 				9D140A45259E6CCF00180B0E /* LoadingIndicator.swift */,
+				9DC4BD8225A8DCD20058902A /* LoadingIndicator2.swift */,
 				9D140A4A259F240000180B0E /* PieGraph.swift */,
 				9D8A371025A0E76F00DA5C04 /* CurveWave.swift */,
+				9D5CA40325A605F4004EFD92 /* SnowlfakeView.swift */,
+				9D64380B25A97DF300B9CB73 /* SpinView.swift */,
 			);
 			path = CoreAnimationView;
 			sourceTree = "<group>";
@@ -162,7 +169,6 @@
 				9D1D5F29259E6A9A00BFC0CD /* AppDelegate.swift */,
 				9D1D5F2B259E6A9A00BFC0CD /* SceneDelegate.swift */,
 				9D1D5F2D259E6A9A00BFC0CD /* ViewController.swift */,
-				9D5CA40325A605F4004EFD92 /* SnowlfakeView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -297,12 +303,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D64380C25A97DF300B9CB73 /* SpinView.swift in Sources */,
 				9D1D5F60259E6AD100BFC0CD /* CountdownProgressBar.swift in Sources */,
 				9D1D5F2E259E6A9A00BFC0CD /* ViewController.swift in Sources */,
 				9D140A46259E6CCF00180B0E /* LoadingIndicator.swift in Sources */,
 				9D5CA40425A605F4004EFD92 /* SnowlfakeView.swift in Sources */,
 				9D1D5F2A259E6A9A00BFC0CD /* AppDelegate.swift in Sources */,
 				9D1D5F2C259E6A9A00BFC0CD /* SceneDelegate.swift in Sources */,
+				9DC4BD8325A8DCD20058902A /* LoadingIndicator2.swift in Sources */,
 				9D140A4B259F240000180B0E /* PieGraph.swift in Sources */,
 				9D8A371125A0E76F00DA5C04 /* CurveWave.swift in Sources */,
 			);
