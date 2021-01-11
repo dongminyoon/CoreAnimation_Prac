@@ -21,9 +21,10 @@
 | 2번째 | [Spinner Loading 1](https://github.com/dongminyoon/CoreAnimation_Prac/blob/main/CoreAnimation_Practice/CoreAnimation_Practice/CoreAnimationView/LoadingIndicator.swift) |     회전하는 로딩 창 - 일정하게      |
 | 3번째 | [Spinner Loading 2](https://github.com/dongminyoon/CoreAnimation_Prac/blob/main/CoreAnimation_Practice/CoreAnimation_Practice/CoreAnimationView/LoadingIndicator2.swift) |              회전하는 로딩 창 - 가변적으로              |
 | 4번째 | [Spinner Loading 3](https://github.com/dongminyoon/CoreAnimation_Prac/blob/main/CoreAnimation_Practice/CoreAnimation_Practice/CoreAnimationView/LoadingIndicator3.swift) | 회전하는 로딩 창 - 가변적으로 |
-| 5번째 | [Wave](https://github.com/dongminyoon/CoreAnimation_Prac/blob/main/CoreAnimation_Practice/CoreAnimation_Practice/CoreAnimationView/CurveWave.swift) |              물결 치는 Wave              |
-| 6번째 | [Snow Flake](https://github.com/dongminyoon/CoreAnimation_Prac/blob/main/CoreAnimation_Practice/CoreAnimation_Practice/CoreAnimationView/SnowlfakeView.swift) |              눈오는 화면              |
-| 7번째 | [Pie Graph](https://github.com/dongminyoon/CoreAnimation_Prac/blob/main/CoreAnimation_Practice/CoreAnimation_Practice/CoreAnimationView/PieGraph.swift) |         Pie Graph 비율로 그리기          |
+| 5번째 | [Custom Loading 4](https://github.com/dongminyoon/CoreAnimation_Prac/blob/main/CoreAnimation_Practice/CoreAnimation_Practice/CoreAnimationView/LoadingIndicator4.swift) | 로딩화면 보여주는 Indicator |
+| 6번째 | [Wave](https://github.com/dongminyoon/CoreAnimation_Prac/blob/main/CoreAnimation_Practice/CoreAnimation_Practice/CoreAnimationView/CurveWave.swift) |              물결 치는 Wave              |
+| 7번째 | [Snow Flake](https://github.com/dongminyoon/CoreAnimation_Prac/blob/main/CoreAnimation_Practice/CoreAnimation_Practice/CoreAnimationView/SnowlfakeView.swift) |              눈오는 화면              |
+| 8번째 | [Pie Graph](https://github.com/dongminyoon/CoreAnimation_Prac/blob/main/CoreAnimation_Practice/CoreAnimation_Practice/CoreAnimationView/PieGraph.swift) |         Pie Graph 비율로 그리기          |
 
 
 ---
@@ -46,13 +47,17 @@
 <p align="center"><img src="./images/spinnerloading3.gif" width="200px"></p>
 <br>
 
-5. ***Wave***
+5. ***Custom Loading 4***
+<p align="center"><img src="./images/loadingindicator4.gif" width="200px"></p>
+<br>
+
+6. ***Wave***
 <p align="center"><img src="./images/wave.gif" width="200px"></p>
 <br>
 
-6. ***Snow Flake***
+7. ***Snow Flake***
 <p align="center"><img src="./images/snowflake.gif" width="200px">
 
-7. ***Pie Graph***
+8. ***Pie Graph***
 <p align="center"><img src="./images/piegraph.gif" width="200px"></p>
 <br>
