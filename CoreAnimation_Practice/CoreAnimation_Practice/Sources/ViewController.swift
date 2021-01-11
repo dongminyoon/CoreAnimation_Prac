@@ -12,12 +12,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let loadingIndicator: LoadingIndicator3 = LoadingIndicator3(frame: CGRect(x: view.center.x,
-                                                                                  y: view.center.y,
+        let loadingIndicator: LoadingIndicator3 = LoadingIndicator3(frame: CGRect(x: 0,
+                                                                                  y: 0,
                                                                                   width: 100,
                                                                                   height: 100))
+        loadingIndicator.center = self.view.center
         self.view.addSubview(loadingIndicator)
-        
         loadingIndicator.startAnimation()
     }
 }

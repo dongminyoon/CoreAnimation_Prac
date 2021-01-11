@@ -50,4 +50,10 @@ class LoadingIndicator3: UIView {
         indicatorLayer.add(strokeEndanimation, forKey: "stroke")
         indicatorLayer.add(rotationAnimation, forKey: "rotate")
     }
+    
+    func stopAnimation() {
+        self.layer.sublayers?.forEach {
+            $0.removeAllAnimations()
+        }
+    }
 }

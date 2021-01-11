@@ -147,11 +147,11 @@
 				9D1D5F5F259E6AD100BFC0CD /* CountdownProgressBar.swift */,
 				9D140A45259E6CCF00180B0E /* LoadingIndicator.swift */,
 				9DC4BD8225A8DCD20058902A /* LoadingIndicator2.swift */,
+				9DC43A4125AC8A6400E06E5B /* LoadingIndicator3.swift */,
 				9D140A4A259F240000180B0E /* PieGraph.swift */,
 				9D8A371025A0E76F00DA5C04 /* CurveWave.swift */,
 				9D5CA40325A605F4004EFD92 /* SnowlfakeView.swift */,
 				9D64380B25A97DF300B9CB73 /* SpinView.swift */,
-				9DC43A4125AC8A6400E06E5B /* LoadingIndicator3.swift */,
 			);
 			path = CoreAnimationView;
 			sourceTree = "<group>";
