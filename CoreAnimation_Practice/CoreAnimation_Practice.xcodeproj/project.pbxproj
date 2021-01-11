@@ -22,6 +22,7 @@
 		9D64380C25A97DF300B9CB73 /* SpinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D64380B25A97DF300B9CB73 /* SpinView.swift */; };
 		9D8A371125A0E76F00DA5C04 /* CurveWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A371025A0E76F00DA5C04 /* CurveWave.swift */; };
 		9DC43A4225AC8A6400E06E5B /* LoadingIndicator3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC43A4125AC8A6400E06E5B /* LoadingIndicator3.swift */; };
+		9DC43A4A25ACAF8A00E06E5B /* LoadingIndicator4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC43A4925ACAF8A00E06E5B /* LoadingIndicator4.swift */; };
 		9DC4BD8325A8DCD20058902A /* LoadingIndicator2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4BD8225A8DCD20058902A /* LoadingIndicator2.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		9D64380B25A97DF300B9CB73 /* SpinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinView.swift; sourceTree = "<group>"; };
 		9D8A371025A0E76F00DA5C04 /* CurveWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveWave.swift; sourceTree = "<group>"; };
 		9DC43A4125AC8A6400E06E5B /* LoadingIndicator3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator3.swift; sourceTree = "<group>"; };
+		9DC43A4925ACAF8A00E06E5B /* LoadingIndicator4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator4.swift; sourceTree = "<group>"; };
 		9DC4BD8225A8DCD20058902A /* LoadingIndicator2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 				9D140A45259E6CCF00180B0E /* LoadingIndicator.swift */,
 				9DC4BD8225A8DCD20058902A /* LoadingIndicator2.swift */,
 				9DC43A4125AC8A6400E06E5B /* LoadingIndicator3.swift */,
+				9DC43A4925ACAF8A00E06E5B /* LoadingIndicator4.swift */,
 				9D140A4A259F240000180B0E /* PieGraph.swift */,
 				9D8A371025A0E76F00DA5C04 /* CurveWave.swift */,
 				9D5CA40325A605F4004EFD92 /* SnowlfakeView.swift */,
@@ -311,6 +314,7 @@
 				9D1D5F2E259E6A9A00BFC0CD /* ViewController.swift in Sources */,
 				9D140A46259E6CCF00180B0E /* LoadingIndicator.swift in Sources */,
 				9D5CA40425A605F4004EFD92 /* SnowlfakeView.swift in Sources */,
+				9DC43A4A25ACAF8A00E06E5B /* LoadingIndicator4.swift in Sources */,
 				9D1D5F2A259E6A9A00BFC0CD /* AppDelegate.swift in Sources */,
 				9D1D5F2C259E6A9A00BFC0CD /* SceneDelegate.swift in Sources */,
 				9DC4BD8325A8DCD20058902A /* LoadingIndicator2.swift in Sources */,
