@@ -12,8 +12,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let snowView = SnowlfakeView(frame: self.view.bounds)
-        self.view.addSubview(snowView)
+        let loadingIndicator: LoadingIndicator3 = LoadingIndicator3(frame: CGRect(x: view.center.x,
+                                                                                  y: view.center.y,
+                                                                                  width: 100,
+                                                                                  height: 100))
+        self.view.addSubview(loadingIndicator)
+        
+        loadingIndicator.startAnimation()
     }
 }
 
