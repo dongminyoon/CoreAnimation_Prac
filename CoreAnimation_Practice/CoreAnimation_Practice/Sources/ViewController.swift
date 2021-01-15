@@ -13,13 +13,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let indicator = LoadingIndicator4(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-        indicator.center = CGPoint(x: view.center.x + 40, y: view.center.y)
+        let indicator = LoadingIndicator5(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        indicator.center = self.view.center
         
-        indicator.circleColor = UIColor.red
+        print(indicator.intrinsicContentSize)
+        
         self.view.addSubview(indicator)
         
-        indicator.startAnimation()
+        indicator.animate(duration: 2.0)
     }
 }
 
