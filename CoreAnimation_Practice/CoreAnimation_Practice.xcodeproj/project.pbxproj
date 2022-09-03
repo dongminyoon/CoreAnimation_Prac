@@ -25,6 +25,15 @@
 		9DC43A4225AC8A6400E06E5B /* LoadingIndicator3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC43A4125AC8A6400E06E5B /* LoadingIndicator3.swift */; };
 		9DC43A4A25ACAF8A00E06E5B /* LoadingIndicator4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC43A4925ACAF8A00E06E5B /* LoadingIndicator4.swift */; };
 		9DC4BD8325A8DCD20058902A /* LoadingIndicator2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4BD8225A8DCD20058902A /* LoadingIndicator2.swift */; };
+		CEC315E028C32BD700D7D433 /* CountdownProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC315DF28C32BD700D7D433 /* CountdownProgressBarViewController.swift */; };
+		CEE9463D28C333B000B566BC /* AnimationPracCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9463C28C333B000B566BC /* AnimationPracCategory.swift */; };
+		CEE9463F28C3348D00B566BC /* SpinnerLoading1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9463E28C3348D00B566BC /* SpinnerLoading1ViewController.swift */; };
+		CEE9464128C3349D00B566BC /* SpinnerLoading2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9464028C3349D00B566BC /* SpinnerLoading2ViewController.swift */; };
+		CEE9464328C334AC00B566BC /* SpinnerLoading3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9464228C334AC00B566BC /* SpinnerLoading3ViewController.swift */; };
+		CEE9464528C334BB00B566BC /* SpinnerLoading4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9464428C334BB00B566BC /* SpinnerLoading4ViewController.swift */; };
+		CEE9464728C334C800B566BC /* SpinnerLoading5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9464628C334C800B566BC /* SpinnerLoading5ViewController.swift */; };
+		CEE9464928C334D800B566BC /* SnowFlakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9464828C334D800B566BC /* SnowFlakeViewController.swift */; };
+		CEE9464B28C334E800B566BC /* PieGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9464A28C334E800B566BC /* PieGraphViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +78,15 @@
 		9DC43A4125AC8A6400E06E5B /* LoadingIndicator3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator3.swift; sourceTree = "<group>"; };
 		9DC43A4925ACAF8A00E06E5B /* LoadingIndicator4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator4.swift; sourceTree = "<group>"; };
 		9DC4BD8225A8DCD20058902A /* LoadingIndicator2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator2.swift; sourceTree = "<group>"; };
+		CEC315DF28C32BD700D7D433 /* CountdownProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownProgressBarViewController.swift; sourceTree = "<group>"; };
+		CEE9463C28C333B000B566BC /* AnimationPracCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPracCategory.swift; sourceTree = "<group>"; };
+		CEE9463E28C3348D00B566BC /* SpinnerLoading1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerLoading1ViewController.swift; sourceTree = "<group>"; };
+		CEE9464028C3349D00B566BC /* SpinnerLoading2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerLoading2ViewController.swift; sourceTree = "<group>"; };
+		CEE9464228C334AC00B566BC /* SpinnerLoading3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerLoading3ViewController.swift; sourceTree = "<group>"; };
+		CEE9464428C334BB00B566BC /* SpinnerLoading4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerLoading4ViewController.swift; sourceTree = "<group>"; };
+		CEE9464628C334C800B566BC /* SpinnerLoading5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerLoading5ViewController.swift; sourceTree = "<group>"; };
+		CEE9464828C334D800B566BC /* SnowFlakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowFlakeViewController.swift; sourceTree = "<group>"; };
+		CEE9464A28C334E800B566BC /* PieGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieGraphViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,11 +193,36 @@
 		9D1D5F66259E6B0200BFC0CD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CEE9463B28C3339400B566BC /* Enum */,
+				CEC315DE28C32B7B00D7D433 /* ViewController */,
 				9D1D5F29259E6A9A00BFC0CD /* AppDelegate.swift */,
 				9D1D5F2B259E6A9A00BFC0CD /* SceneDelegate.swift */,
-				9D1D5F2D259E6A9A00BFC0CD /* ViewController.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		CEC315DE28C32B7B00D7D433 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D1D5F2D259E6A9A00BFC0CD /* ViewController.swift */,
+				CEC315DF28C32BD700D7D433 /* CountdownProgressBarViewController.swift */,
+				CEE9463E28C3348D00B566BC /* SpinnerLoading1ViewController.swift */,
+				CEE9464028C3349D00B566BC /* SpinnerLoading2ViewController.swift */,
+				CEE9464228C334AC00B566BC /* SpinnerLoading3ViewController.swift */,
+				CEE9464428C334BB00B566BC /* SpinnerLoading4ViewController.swift */,
+				CEE9464628C334C800B566BC /* SpinnerLoading5ViewController.swift */,
+				CEE9464828C334D800B566BC /* SnowFlakeViewController.swift */,
+				CEE9464A28C334E800B566BC /* PieGraphViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CEE9463B28C3339400B566BC /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				CEE9463C28C333B000B566BC /* AnimationPracCategory.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,8 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D64380C25A97DF300B9CB73 /* SpinView.swift in Sources */,
+				CEE9463D28C333B000B566BC /* AnimationPracCategory.swift in Sources */,
 				9D1D5F60259E6AD100BFC0CD /* CountdownProgressBar.swift in Sources */,
+				CEE9463F28C3348D00B566BC /* SpinnerLoading1ViewController.swift in Sources */,
 				9D1D5F2E259E6A9A00BFC0CD /* ViewController.swift in Sources */,
+				CEC315E028C32BD700D7D433 /* CountdownProgressBarViewController.swift in Sources */,
 				9D140A46259E6CCF00180B0E /* LoadingIndicator.swift in Sources */,
 				9D9DF76E25B2468D0075F3BD /* LoadingIndicator5.swift in Sources */,
 				9D5CA40425A605F4004EFD92 /* SnowlfakeView.swift in Sources */,
@@ -323,8 +369,14 @@
 				9D1D5F2C259E6A9A00BFC0CD /* SceneDelegate.swift in Sources */,
 				9DC4BD8325A8DCD20058902A /* LoadingIndicator2.swift in Sources */,
 				9D140A4B259F240000180B0E /* PieGraph.swift in Sources */,
+				CEE9464528C334BB00B566BC /* SpinnerLoading4ViewController.swift in Sources */,
+				CEE9464728C334C800B566BC /* SpinnerLoading5ViewController.swift in Sources */,
 				9DC43A4225AC8A6400E06E5B /* LoadingIndicator3.swift in Sources */,
 				9D8A371125A0E76F00DA5C04 /* CurveWave.swift in Sources */,
+				CEE9464B28C334E800B566BC /* PieGraphViewController.swift in Sources */,
+				CEE9464928C334D800B566BC /* SnowFlakeViewController.swift in Sources */,
+				CEE9464128C3349D00B566BC /* SpinnerLoading2ViewController.swift in Sources */,
+				CEE9464328C334AC00B566BC /* SpinnerLoading3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

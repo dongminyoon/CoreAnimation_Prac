@@ -28,7 +28,6 @@ class CountdownProgressBar: UIView {
         foregroundLayer.strokeColor = UIColor.blue.cgColor
         foregroundLayer.fillColor = UIColor.clear.cgColor
         foregroundLayer.lineCap = .round
-        foregroundLayer.frame = bounds
         foregroundLayer.strokeEnd = 0
         return foregroundLayer
     }()
@@ -38,7 +37,6 @@ class CountdownProgressBar: UIView {
         backgroundLayer.lineWidth = 10
         backgroundLayer.strokeColor = UIColor.lightGray.cgColor
         backgroundLayer.lineCap = .round
-        backgroundLayer.frame = bounds
         backgroundLayer.fillColor = UIColor.clear.cgColor
         return backgroundLayer
     }()
@@ -49,7 +47,6 @@ class CountdownProgressBar: UIView {
         pulseLayer.strokeColor = UIColor.lightGray.cgColor
         pulseLayer.lineCap = .round
         pulseLayer.fillColor = UIColor.clear.cgColor
-        pulseLayer.frame = bounds
         return pulseLayer
     }()
     
@@ -63,25 +60,29 @@ class CountdownProgressBar: UIView {
         loadLayers()
     }
     
-    private func loadLayers() {
-        let centerPoint = CGPoint(x: frame.width/2, y: frame.height/2)
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.pulseLayer.frame = self.bounds
+        self.backgroundLayer.frame = self.bounds
+        self.foregroundLayer.frame = self.bounds
+        self.remainingTime.frame = self.bounds
         
+        let centerPoint = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
         let circularPath = UIBezierPath(arcCenter: centerPoint,
-                                        radius: bounds.width/2,
-                                        startAngle: -CGFloat.pi/2,
-                                        endAngle: 2*CGFloat.pi - CGFloat.pi/2,
+                                        radius: self.bounds.width / 2,
+                                        startAngle: -CGFloat.pi / 2,
+                                        endAngle: (2 * CGFloat.pi) - (CGFloat.pi / 2),
                                         clockwise: true)
-
-        pulseLayer.path = circularPath.cgPath
-        layer.addSublayer(pulseLayer)
-        
-        backgroundLayer.path = circularPath.cgPath
-        layer.addSublayer(backgroundLayer)
-        
-        foregroundLayer.path = circularPath.cgPath
-        layer.addSublayer(foregroundLayer)
-        
-        addSubview(remainingTimeLabel)
+        self.pulseLayer.path = circularPath.cgPath
+        self.backgroundLayer.path = circularPath.cgPath
+        self.foregroundLayer.path = circularPath.cgPath
+    }
+    
+    private func loadLayers() {
+        self.layer.addSublayer(self.pulseLayer)
+        self.layer.addSublayer(self.backgroundLayer)
+        self.layer.addSublayer(self.foregroundLayer)
+        self.addSubview(self.remainingTimeLabel)
     }
     
     private func animateForegroundLayer() {
