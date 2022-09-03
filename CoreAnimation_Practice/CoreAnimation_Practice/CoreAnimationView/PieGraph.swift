@@ -8,14 +8,20 @@
 import UIKit
 
 class PieGraph: UIView {
-    var eachSlice: [Float] = [0.2, 0.5, 0.3]
-    var startAngle: CGFloat = -.pi/2
-    var endAngle: CGFloat = 0
-    var curIndex: Int = 0
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
 
-    var colorSet: [UIColor] = [.blue, .red, .brown]
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func startAnimation() {
+        self.addAnimation(from: 0)
+    }
 
-    func addAnimation(from index: Int) {
+    private func addAnimation(from index: Int) {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.fromValue = 0
         animation.toValue = 1
@@ -23,42 +29,43 @@ class PieGraph: UIView {
         animation.delegate = self
 
         let arcLayer = CAShapeLayer()
-        arcLayer.strokeColor = colorSet[index].cgColor
+        arcLayer.strokeColor = self.colorSet[index].cgColor
         arcLayer.lineWidth = 80
         arcLayer.fillColor = UIColor.clear.cgColor
         arcLayer.lineCap = .butt
 
-        let center = CGPoint(x: frame.width/2, y: frame.height/2)
-        let changed = CGFloat(eachSlice[curIndex]) * .pi * 2.0
-        endAngle = startAngle + CGFloat(changed)
+        let center = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
+        let changed = CGFloat(self.eachSlice[curIndex]) * .pi * 2.0
+        self.endAngle = self.startAngle + CGFloat(changed)
         let path = UIBezierPath(arcCenter: center,
-                                radius: frame.width/2,
-                                startAngle: startAngle,
-                                endAngle: endAngle,
+                                radius: self.frame.width / 2,
+                                startAngle: self.startAngle,
+                                endAngle: self.endAngle,
                                 clockwise: true)
 
         arcLayer.path = path.cgPath
         arcLayer.add(animation, forKey: "move")
-        layer.addSublayer(arcLayer)
+        self.layer.addSublayer(arcLayer)
     }
+    
+    private var eachSlice: [Float] = [0.2, 0.5, 0.3]
+    private var startAngle: CGFloat = -.pi / 2
+    private var endAngle: CGFloat = 0
+    private var curIndex: Int = 0
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addAnimation(from: 0)
-    }
+    private var colorSet: [UIColor] = [.blue, .red, .brown]
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
 }
 
 extension PieGraph: CAAnimationDelegate {
+    
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         guard flag else { return }
-        if curIndex >= eachSlice.count-1 { return }
+        if self.curIndex >= self.eachSlice.count-1 { return }
         
-        startAngle = endAngle
-        curIndex += 1
-        addAnimation(from: curIndex)
+        self.startAngle = self.endAngle
+        self.curIndex += 1
+        self.addAnimation(from: self.curIndex)
     }
+    
 }

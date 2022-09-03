@@ -16,46 +16,36 @@ struct WavePoint {
     let velocityX: CGFloat = 5
     
     mutating func update() {
-        positionX += velocityX
-        positionY = 100 + sin(CGFloat(positionX) * .pi / 180) * 10
+        self.positionX += self.velocityX
+        self.positionY = 100 + sin(CGFloat(self.positionX) * .pi / 180) * 10
     }
 }
 
 class CurveWave: UIView {
-    private var points: [WavePoint] = []
-    
-    private lazy var waveLayer: CAShapeLayer = {
-        let layer = CAShapeLayer()
-        layer.frame = self.bounds
-        layer.strokeColor = UIColor.cyan.cgColor
-        layer.lineWidth = 5
-        layer.fillColor = UIColor.cyan.cgColor
-        return layer
-    }()
     
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: bounds.origin.x, y: bounds.origin.y + 100))
+        path.move(to: CGPoint(x: self.bounds.origin.x, y: self.bounds.origin.y + 100))
         
-        points.forEach { point in
+        self.points.forEach { point in
             path.addLine(to: CGPoint(x: point.constPositionX, y: point.positionY))
         }
         
-        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
-        path.addLine(to: CGPoint(x: 0, y: bounds.height))
+        path.addLine(to: CGPoint(x: self.bounds.width, y: self.bounds.height))
+        path.addLine(to: CGPoint(x: 0, y: self.bounds.height))
         path.close()
 
-        waveLayer.path = path.cgPath
-        self.layer.addSublayer(waveLayer)
+        self.waveLayer.path = path.cgPath
+        self.layer.addSublayer(self.waveLayer)
         
-        let displayLink = CADisplayLink(target: self, selector: #selector(update))
+        let displayLink = CADisplayLink(target: self, selector: #selector(self.update))
         displayLink.add(to: .current, forMode: .default)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .clear
-        initPoints()
+        self.initPoints()
     }
     
     required init?(coder: NSCoder) {
@@ -66,25 +56,35 @@ class CurveWave: UIView {
         for x in 0...Int(UIScreen.main.bounds.width) {
             let y = 100 + sin(CGFloat(x) * .pi / 180) * 10
             let point = WavePoint(constPositionX: CGFloat(x), positionX: CGFloat(x), positionY: y)
-            points.append(point)
+            self.points.append(point)
         }
     }
     
-    @objc
-    func update(displayLink: CADisplayLink) {
+    @objc private func update(displayLink: CADisplayLink) {
         let curPath = UIBezierPath()
-        curPath.move(to: CGPoint(x: bounds.origin.x, y: bounds.origin.y + 100))
+        curPath.move(to: CGPoint(x: self.bounds.origin.x, y: self.bounds.origin.y + 100))
         
-        for index in 0..<points.count {
-            points[index].update()
-            curPath.addLine(to: CGPoint(x: points[index].constPositionX,
-                                        y: points[index].positionY))
+        for index in 0..<self.points.count {
+            self.points[index].update()
+            curPath.addLine(to: CGPoint(x: self.points[index].constPositionX,
+                                        y: self.points[index].positionY))
         }
         
-        curPath.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
-        curPath.addLine(to: CGPoint(x: 0, y: bounds.height))
+        curPath.addLine(to: CGPoint(x: self.bounds.width, y: self.bounds.height))
+        curPath.addLine(to: CGPoint(x: 0, y: self.bounds.height))
         curPath.close()
         
         waveLayer.path = curPath.cgPath
     }
+    
+    private var points: [WavePoint] = []
+    private lazy var waveLayer: CAShapeLayer = {
+        let layer = CAShapeLayer()
+        layer.frame = self.bounds
+        layer.strokeColor = UIColor.cyan.cgColor
+        layer.lineWidth = 5
+        layer.fillColor = UIColor.cyan.cgColor
+        return layer
+    }()
+    
 }

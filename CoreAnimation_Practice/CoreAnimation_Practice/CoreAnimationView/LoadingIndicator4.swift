@@ -8,17 +8,20 @@
 import UIKit
 
 class LoadingIndicator4: UIView {
+    
     var circleColor: UIColor? {
         didSet {
-            circleViews.forEach { $0.backgroundColor = circleColor }
+            self.circleViews.forEach { $0.backgroundColor = self.circleColor }
         }
     }
     
-    private let circleViews: [UIView] = [UIView(), UIView(), UIView()]
+    override var intrinsicContentSize: CGSize {
+        CGSize(width: 100, height: 20)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        circleViews.forEach {
+        self.circleViews.forEach {
             $0.backgroundColor = .lightGray
             $0.clipsToBounds = true
             $0.layer.cornerRadius = 10
@@ -27,19 +30,29 @@ class LoadingIndicator4: UIView {
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
     
     func startAnimation() {
-        circleViews.forEach {
-            addSubview($0)
+        self.circleViews.forEach {
+            self.addSubview($0)
         }
         
         var delay: Double = 0
-        circleViews.forEach {
-            animate(at: $0, with: delay)
+        self.circleViews.forEach {
+            self.animate(at: $0, with: delay)
             delay += 0.85
+        }
+    }
+    
+    func stopAnimation() {
+        self.circleViews.forEach {
+            $0.removeFromSuperview()
         }
     }
     
@@ -63,9 +76,6 @@ class LoadingIndicator4: UIView {
         })
     }
     
-    func stopAnimation() {
-        circleViews.forEach {
-            $0.removeFromSuperview()
-        }
-    }
+    private let circleViews: [UIView] = [UIView(), UIView(), UIView()]
+    
 }

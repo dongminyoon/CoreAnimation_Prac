@@ -14,6 +14,7 @@ enum AnimationPracCategory: CaseIterable {
     case spinnerLoading3
     case spinnerLoading4
     case spinnerLoading5
+    case wave
     case snowFlake
     case pieGraph
     
@@ -25,6 +26,7 @@ enum AnimationPracCategory: CaseIterable {
         case .spinnerLoading3:  return "Spinner Loading 3"
         case .spinnerLoading4:  return "Spinner Loading 4"
         case .spinnerLoading5:  return "Spinner Loading 5"
+        case .wave:             return "Wave"
         case .snowFlake:        return "Snow Flake"
         case .pieGraph:         return "Pie Graph"
         }
@@ -38,6 +40,7 @@ enum AnimationPracCategory: CaseIterable {
         case .spinnerLoading3:  return SpinnerLoading3ViewController()
         case .spinnerLoading4:  return SpinnerLoading4ViewController()
         case .spinnerLoading5:  return SpinnerLoading5ViewController()
+        case .wave:             return WaveViewController()
         case .snowFlake:        return SnowFlakeViewController()
         case .pieGraph:         return PieGraphViewController()
         }

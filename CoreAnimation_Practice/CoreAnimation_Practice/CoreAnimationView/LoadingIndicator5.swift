@@ -8,26 +8,35 @@
 import UIKit
 
 class LoadingIndicator5: UIView {
+    
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 80, height: 20)
     }
     
-    private let circleViews: [UIView] = [UIView(), UIView(), UIView()]
-    
     var circleColor: UIColor? {
         didSet {
-            circleViews.forEach { $0.backgroundColor = circleColor }
+            self.circleViews.forEach { $0.backgroundColor = self.circleColor }
         }
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        initView()
+        self.initView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initView()
+        self.initView()
+    }
+    
+    func animate(duration: TimeInterval) {
+        var delay: TimeInterval = 0
+        var index: Int = 0
+        self.circleViews.forEach {
+            self.animateSub(circle: $0, withDuration: duration, delay: delay, index: index)
+            delay += 0.4
+            index += 1
+        }
     }
     
     private func initView() {
@@ -45,27 +54,21 @@ class LoadingIndicator5: UIView {
         }
     }
     
-    func animate(duration: TimeInterval) {
-        var delay: TimeInterval = 0
-        var index: Int = 0
-        circleViews.forEach {
-            self.animateSub(circle: $0, withDuration: duration, delay: delay, index: index)
-            delay += 0.4
-            index += 1
-        }
-    }
     
     private func animateSub(circle: UIView, withDuration: TimeInterval, delay: TimeInterval, index: Int) {
         circle.transform = CGAffineTransform(scaleX: 0, y: 0)
         UIView.animate(withDuration: withDuration,
                        delay: delay,
                        animations: {
-                        circle.transform = .identity
-                       }, completion: { [weak self] isCompletion in
-                        guard let self = self else { return }
-                        if index == self.circleViews.count-1 {
-                            self.animate(duration: 2.0)
-                        }
-                       })
+            circle.transform = .identity
+        }, completion: { [weak self] _ in
+            guard let self = self else { return }
+            if index == self.circleViews.count - 1 {
+                self.animate(duration: withDuration)
+            }
+        })
     }
+    
+    private let circleViews: [UIView] = [UIView(), UIView(), UIView()]
+    
 }
