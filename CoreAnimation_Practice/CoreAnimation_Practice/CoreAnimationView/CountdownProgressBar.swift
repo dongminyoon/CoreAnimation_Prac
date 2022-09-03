@@ -65,7 +65,7 @@ class CountdownProgressBar: UIView {
         self.pulseLayer.frame = self.bounds
         self.backgroundLayer.frame = self.bounds
         self.foregroundLayer.frame = self.bounds
-        self.remainingTime.frame = self.bounds
+        self.remainingTimeLabel.frame = self.bounds
         
         let centerPoint = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
         let circularPath = UIBezierPath(arcCenter: centerPoint,

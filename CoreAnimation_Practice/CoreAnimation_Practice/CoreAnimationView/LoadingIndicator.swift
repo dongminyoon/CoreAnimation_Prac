@@ -14,7 +14,6 @@ class LoadingIndicator: UIView {
         layer.strokeColor = UIColor.black.cgColor
         layer.fillColor = UIColor.clear.cgColor
         layer.lineCap = .round
-        layer.frame = bounds
         return layer
     }()
     
@@ -24,7 +23,6 @@ class LoadingIndicator: UIView {
         layer.fillColor = UIColor.clear.cgColor
         layer.lineWidth = 5
         layer.lineCap = .round
-        layer.frame = bounds
         layer.strokeEnd = 0.35
         return layer
     }()
@@ -38,27 +36,38 @@ class LoadingIndicator: UIView {
                                 clockwise: true)
         return path
     }()
-
-    override func draw(_ rect: CGRect) {
-        backgroundLayer.path = circlePath.cgPath
-        indicatorLayer.path = circlePath.cgPath
-        
-        layer.addSublayer(backgroundLayer)
-        layer.addSublayer(indicatorLayer)
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .darkGray
-        clipsToBounds = true
-        layer.cornerRadius = frame.width/2
+        self.backgroundColor = .darkGray
+        self.clipsToBounds = true
+        self.layer.cornerRadius = self.frame.width / 2
+        
+        self.layer.addSublayer(self.backgroundLayer)
+        self.layer.addSublayer(self.indicatorLayer)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        backgroundColor = UIColor.darkGray.withAlphaComponent(0.7)
-        clipsToBounds = true
-        layer.cornerRadius = frame.width/2
+        self.backgroundColor = .darkGray
+        self.clipsToBounds = true
+        self.layer.cornerRadius = frame.width/2
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layer.cornerRadius = self.bounds.width / 2
+        self.backgroundLayer.frame = self.bounds
+        self.indicatorLayer.frame = self.bounds
+        
+        let center = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
+        let circlePath = UIBezierPath(arcCenter: center,
+                                radius: (self.bounds.width / 2) * (2/3),
+                                startAngle: -CGFloat.pi / 2,
+                                endAngle: (CGFloat.pi * 2) - (CGFloat.pi / 2),
+                                clockwise: true)
+        self.backgroundLayer.path = circlePath.cgPath
+        self.indicatorLayer.path = circlePath.cgPath
     }
     
     func startAnimation() {

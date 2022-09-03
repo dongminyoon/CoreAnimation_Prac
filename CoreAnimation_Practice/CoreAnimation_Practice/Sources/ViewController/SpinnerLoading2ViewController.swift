@@ -11,7 +11,15 @@ class SpinnerLoading2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = .white
+        
+        self.loadingView.frame.size = CGSize(width: 200, height: 200)
+        self.loadingView.center = self.view.center
+        self.view.addSubview(self.loadingView)
+        
+        self.loadingView.startAnimation()
     }
+    
+    private let loadingView = LoadingIndicator2(frame: .zero)
 
 }

@@ -8,15 +8,6 @@
 import UIKit
 
 class LoadingIndicator3: UIView {
-    private lazy var circlePath: UIBezierPath = {
-        let center = CGPoint(x: bounds.width/2, y: bounds.height/2)
-        let path = UIBezierPath(arcCenter: center,
-                                radius: bounds.width/2,
-                                startAngle: -CGFloat.pi/2,
-                                endAngle: 2*CGFloat.pi - CGFloat.pi/2,
-                                clockwise: true)
-        return path
-    }()
     
     private lazy var indicatorLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
@@ -24,14 +15,29 @@ class LoadingIndicator3: UIView {
         layer.lineWidth = 7
         layer.lineCap = .round
         layer.strokeColor = UIColor.lightGray.cgColor
-        layer.frame = self.bounds
         return layer
     }()
     
-    override func draw(_ rect: CGRect) {
-        indicatorLayer.path = circlePath.cgPath
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.layer.addSublayer(self.indicatorLayer)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.indicatorLayer.frame = self.bounds
         
-        self.layer.addSublayer(indicatorLayer)
+        let center = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
+        let circlePath = UIBezierPath(arcCenter: center,
+                                radius: self.bounds.width / 2,
+                                startAngle: -CGFloat.pi / 2,
+                                endAngle: 2 * CGFloat.pi - CGFloat.pi / 2,
+                                clockwise: true)
+        self.indicatorLayer.path = circlePath.cgPath
     }
     
     func startAnimation() {
