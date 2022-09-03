@@ -9,15 +9,6 @@ import UIKit
 
 class LoadingIndicator3: UIView {
     
-    private lazy var indicatorLayer: CAShapeLayer = {
-        let layer = CAShapeLayer()
-        layer.fillColor = UIColor.clear.cgColor
-        layer.lineWidth = 7
-        layer.lineCap = .round
-        layer.strokeColor = UIColor.lightGray.cgColor
-        return layer
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.addSublayer(self.indicatorLayer)
@@ -62,4 +53,14 @@ class LoadingIndicator3: UIView {
             $0.removeAllAnimations()
         }
     }
+    
+    private lazy var indicatorLayer: CAShapeLayer = {
+        let layer = CAShapeLayer()
+        layer.fillColor = UIColor.clear.cgColor
+        layer.lineWidth = 7
+        layer.lineCap = .round
+        layer.strokeColor = UIColor.lightGray.cgColor
+        return layer
+    }()
+    
 }

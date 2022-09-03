@@ -45,6 +45,7 @@ extension ViewController: UITableViewDelegate {
         
         let exampleViewController = practiceCategory.exampleViewController
         self.navigationController?.pushViewController(exampleViewController, animated: true)
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
